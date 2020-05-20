@@ -106,7 +106,7 @@ let filterTasks = () => {
 // }
 
 // need to call loadData -- this function isn't in anything bc we want to call it when we load the page
-loadData() 
+// loadData() 
 
 // if you want to remove all the items
 //localStorage.removeItem("todo") 
