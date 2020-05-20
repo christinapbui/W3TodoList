@@ -4,6 +4,9 @@
 let itemList = JSON.parse(localStorage.getItem('todo'))
 // null
 // []
+if (itemList == null){
+    itemList = []
+}
 let userEnteredItem = document.getElementById('itemInput')
 let previousList = []
 
