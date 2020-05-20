@@ -32,3 +32,40 @@ let toggleDone = (i) => {
     itemList[i].isDone = !(itemList[i].isDone) // itemList[i] is object, .isDone is key value
     showList(itemList);
 }
+
+
+// add filter walkthrough - 1 
+// let filterTasks = () => {
+//     let filterList = itemList.filter(item => item.isDone == false) // item will be each object from the list
+//     console.log("this is filtered list",filterList)
+//     showList(filterList) // filterList and not itemList because this is the new list you want to show
+// }
+    // ^ value is false bc the item is not done
+    // ^ but it's not showing up because you have to update the UI (showList)
+
+// add filter walkthrough - 2
+let filterTasks = () => {
+    if(document.getElementById("filterUndone").checked == true){
+        let filterList = itemList.filter(item => item.isDone == false) 
+        showList(filterList)
+    }else {
+        showList(itemList)
+    }
+}
+
+
+
+// save data on local storage -- class walkthrough
+let save = () => {
+    localStorage.setItem("todo",JSON.stringify(itemList)) // setItem takes 2 arguments: key name (save data or call data) & actual value you want to save
+}
+
+let loadData = () => { //get data from localStorage
+    previousList = JSON.parse(localStorage.getItem("todo")) // the "todo" (key) has to match the one in "setItem"
+    if(previousList.length > 0){ // this means there is previous data
+        itemList = previousList // put previousList into itemList
+        showList(itemList) // include the UI
+    }else{
+        itemList = []
+    }
+}

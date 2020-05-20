@@ -1,10 +1,10 @@
 .container {
-    /* background-color: lightblue; */
     justify-items: center;
     align-items: center;
     flex-direction: row;
     margin: 0 auto;
 }
+
 @import url(https://fonts.googleapis.com/css?family=Pangolin);
 body {
     background-image: url("/images/paperbackground.jpg");
@@ -70,4 +70,8 @@ ul{
     border-radius: 20px;
     background-color: white;
     width: fit-content;
+}
+
+.container .incomplete-tasks{
+    font-size: 14px;
 }

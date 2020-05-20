@@ -15,6 +15,7 @@
                 <h1>Todo List</h1>
                 <input type="text" id="itemInput" class="item-input"/>
                 <button onclick="addItem()" class="add-item">Add Item</button>
+                <input type="checkbox" id="filterUndone" class="incomplete-tasks" onchange="filterTasks()"> <span>Show incomplete tasks only</span>
                 <ul id="resultArea" class="result-area" style="list-style: none;">
                     <p id="showDone"></p>
                 </ul>
