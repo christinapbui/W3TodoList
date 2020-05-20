@@ -36,11 +36,11 @@ let showList = (list) => { // list is the argument// showList will show every it
             result += `<a href="#" onclick='toggleDone(${i})'><input type="checkbox"></a>`;
         }
         result += ` ${item.contents} `
-        result +=  `  |  <a href='#' onclick='deleteItem(${i})'>X</a></li>`// use array function. show list of items
+        result +=  `  [<a href='#' onclick='deleteItem(${i})'>Delete</a>]</li>`// use array function. show list of items
         if (item.isDone){
-            result = '<s>' + result + '</s>'
+            result = '<span class="highlight">' + result + '</span>'
         }else{
-            return result
+            return result = '<span class="highlight">' + result + '</span>'
         }
         return result;
     }).join('');
@@ -66,13 +66,3 @@ let toggleDone = (i) => {
 
 // add filter 
 
-
-
-
-
-// to use enter button to add item -- NEED TO FIX
-// userEnteredItem.addEventListener("enter key",function(enter){
-//     if (enter.keyCode === 13) {
-//         addItem();
-//     }
-// })

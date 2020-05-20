@@ -1,5 +1,73 @@
-/* .container {
-    background-color: lightblue;
+.container {
+    /* background-color: lightblue; */
     justify-items: center;
     align-items: center;
-} */
+    flex-direction: row;
+    margin: 0 auto;
+}
+@import url(https://fonts.googleapis.com/css?family=Pangolin);
+body {
+    background-image: url("/images/paperbackground.jpg");
+    font-family: 'Pangolin',serif;
+}
+
+.item-input {
+    border-color: black;
+    border-spacing: .5px;
+    border-radius: 5%;
+    padding: 5px;
+    font-size:14px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.add-item {
+    background-color: linear-gradient(-90deg, #282c2e, #cccccc);
+    border-color: black;
+    border-spacing: .5px;
+    border-radius: 5%;
+    color: black;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5%;
+}
+.add-item:hover {
+    background-color: yellow;
+    box-shadow: 1px 1px #848484;
+}
+
+.clear-list {
+    background-color: black;
+    border-color: black;
+    border-spacing: .5px;
+    border-radius: 5%;
+    color: white;
+    padding: 6px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5%;
+    display: center;
+}
+
+.clear-list:hover {
+    background-color: red;
+    box-shadow: 1px 1px #848484;
+}
+
+ul{
+    padding: 15px;
+    font-size: 16px;
+    /* margin: 0 auto; */
+    border-radius: 20px;
+    background-color: white;
+    width: fit-content;
+}
